@@ -1,0 +1,126 @@
+Pedido de citação:
+   Este banco de dados de câncer de mama foi obtido na Universidade de Wisconsin
+   Hospitais, Madison, do Dr. William H. Wolberg. Se você publicar resultados
+   ao usar esse banco de dados, inclua essas informações no seu
+   agradecimentos. Além disso, cite um ou mais dos seguintes:
+
+   1. O. L. Mangasarian e W. H. Wolberg: "Diagnóstico do câncer via linear
+      programação ", SIAM News, volume 23, número 5, setembro de 1990, pp 1 e 18.
+
+   2. William H. Wolberg e O.L. Mangasarian: "Método de múltiplas superfícies
+      separação de padrões para diagnóstico médico aplicado à citologia mamária ",
+      Anais da Academia Nacional de Ciências, EUA, Volume 87,
+      Dezembro 1990, pp 9193-9196.
+
+   3. O. L. Mangasarian, R. Setiono e W.H. Wolberg: "Reconhecimento de padrões
+      via programação linear: teoria e aplicação ao diagnóstico médico ",
+      in: "Otimização numérica em larga escala", Thomas F. Coleman e Yuying
+      Li, editores, SIAM Publications, Filadélfia 1990, pp 22-30.
+
+   4. K. P. Bennett e O. L. Mangasarian: "Programação linear robusta
+      discriminação de dois conjuntos linearmente inseparáveis ​​", Métodos de otimização
+      e Software 1, 1992, 23-34 (Gordon & Breach Science Publishers).
+
+1. Título: Banco de Dados do Câncer de Mama de Wisconsin (8 de janeiro de 1991)
+
+2. Fontes:
+   - Dr. WIlliam H. Wolberg (médico)
+      Hospitais da Universidade de Wisconsin
+      Madison, Wisconsin
+      EUA
+   - Doador: Olvi Mangasarian (mangasarian@cs.wisc.edu)
+      Recebido por David W. Aha (aha@cs.jhu.edu)
+   - Data: 15 de julho de 1992
+
+3. Uso Passado:
+
+   Os atributos 2 a 10 foram usados ​​para representar instâncias.
+   Cada instância possui uma das 2 classes possíveis: benigna ou maligna.
+
+   1. Wolberg, W.W., & Mangasarian, O. (1990). Método de múltiplas superfícies
+      separação de padrões para diagnóstico médico aplicado à citologia mamária. Em
+      {\ it Proceedings of National Academy of Sciences}, {\ it 87},
+      9193--9196.
+      - Tamanho do conjunto de dados: apenas 369 instâncias (naquele momento)
+      - Resultados da classificação coletada: apenas 1 estudo
+      - Dois pares de hiperplanos paralelos foram considerados consistentes com
+         50% dos dados
+         - Precisão nos 50% restantes do conjunto de dados: 93,5%
+      - Três pares de hiperplanos paralelos foram considerados consistentes com
+         67% dos dados
+         - Precisão nos 33% restantes do conjunto de dados: 95,9%
+
+   2. Zhang, ~ J. (1992). Selecionando Instâncias Típicas em Instâncias Baseadas em Instâncias
+      Aprendendo. Em {\ it Procedimentos da Nona Máquina Internacional
+      Conferência de Aprendizagem} (pp. 470--479). Aberdeen, Escócia: Morgan
+      Kaufmann.
+      - Tamanho do conjunto de dados: apenas 369 instâncias (naquele momento)
+      - Aplicou 4 algoritmos de aprendizado baseados em instâncias
+      - Resultados de classificação coletados em média em 10 tentativas
+      - Melhor resultado de precisão:
+         - 1 vizinho mais próximo: 93,7%
+         - treinado em 200 instâncias, testado nas outras 169
+      - Também de interesse:
+         - Usando apenas instâncias típicas: 92,2% (armazenando apenas 23,1 instâncias)
+         - treinado em 200 instâncias, testado nas outras 169
+
+4. Informações relevantes:
+
+   As amostras chegam periodicamente quando o Dr. Wolberg relata seus casos clínicos.
+   O banco de dados, portanto, reflete esse agrupamento cronológico dos dados.
+   Essas informações de agrupamento aparecem imediatamente abaixo, tendo sido removidas
+   a partir dos próprios dados:
+
+     Grupo 1: 367 instâncias (janeiro de 1989)
+     Grupo 2: 70 instâncias (outubro de 1989)
+     Grupo 3: 31 instâncias (fevereiro de 1990)
+     Grupo 4: 17 instâncias (abril de 1990)
+     Grupo 5: 48 instâncias (agosto de 1990)
+     Grupo 6: 49 instâncias (Atualizado em janeiro de 1991)
+     Grupo 7: 31 instâncias (junho de 1991)
+     Grupo 8: 86 instâncias (novembro de 1991)
+     -----------------------------------------
+     Total: 699 pontos (a partir da base de dados doada em 15 de julho de 1992)
+
+   Observe que os resultados resumidos acima em Uso passado referem-se a um conjunto de dados
+   do tamanho 369, enquanto o Grupo 1 possui apenas 367 instâncias. Isso é porque
+   originalmente continha 369 instâncias; 2 foram removidos. Os seguintes
+   As instruções resumem as alterações no conjunto de dados original do Grupo 1:
+
+   ##### Grupo 1: 367 pontos: 200B 167M (janeiro de 1989)
+   ##### Revisado em 10 de janeiro de 1991: Núcleos nus nulos substituídos em 1080185 e 1187805
+   ##### Revisado em 22 de novembro de 1991: Removido 765878,4,5,9,7,10,10,10,3,8,1 nenhum registro
+   #####: Removido 484201,2,7,8,8,4,3,10,3,4,1 zero epitelial
+   #####: 0 a 1 alterado no campo 6 da amostra 1219406
+   #####: 0 a 1 alterado no campo 8 do seguinte exemplo:
+   #####: 1182404,2,3,1,1,1,2,0,1,1,1
+
+5. Número de instâncias: 699 (em 15 de julho de 1992)
+
+6. Número de atributos: 10 mais o atributo de classe
+
+7. Informações sobre o atributo: (o atributo da classe foi movido para a última coluna)
+
+   # Domínio de atributo
+   - -----------------------------------------
+   1. Número de código de amostra número de identificação
+   2. Espessura do grupo 1 - 10
+   3. Uniformidade do tamanho da célula 1 - 10
+    4. Uniformidade da forma da célula 1 - 10
+    5. Adesão marginal 1 - 10
+    6. Tamanho de célula epitelial única 1 - 10
+    7. Núcleos desencapados 1 - 10
+    8. Cromatina Branda 1 - 10
+    9. Núcleos normais 1 - 10
+   10. Mitoses 1 - 10
+   11. Classe: (2 para benignos, 4 para malignos)
+
+8. Valores de atributo ausentes: 16
+
+    Existem 16 instâncias nos Grupos 1 a 6 que contêm uma única falta
+    (ou seja, indisponível), valor do atributo, agora indicado por "?".
+
+9. Distribuição de classe:
+ 
+    Benigno: 458 (65,5%)
+    Maligno: 241 (34,5%)

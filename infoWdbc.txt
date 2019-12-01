@@ -1,0 +1,140 @@
+1. Título: Câncer de mama para diagnóstico em Wisconsin (WDBC)
+
+2. Fonte de Informação
+
+a) Criadores:
+
+Dr. William H. Wolberg, Departamento de Cirurgia Geral, Universidade de
+Wisconsin, Centro de Ciências Clínicas, Madison, WI 53792
+wolberg@eagle.surgery.wisc.edu
+
+W. Nick Street, Departamento de Ciências da Computação, Universidade de
+São Paulo, São Paulo, Brazil
+street@cs.wisc.edu 608-262-6619
+
+Olvi L. Mangasarian, Departamento de Ciências da Computação, Universidade de
+São Paulo, São Paulo, Brazil
+olvi@cs.wisc.edu
+
+b) Doador: Nick Street
+
+c) Data: novembro de 1995
+
+3. Uso Passado:
+
+primeiro uso:
+
+W.N. Street, W.H. Wolberg e O.L. Mangasarian
+Extração de característica nuclear para diagnóstico de tumor de mama.
+Simpósio Internacional IS & T / SPIE 1993 sobre Imagem Eletrônica: Ciência
+and Technology, volume 1905, páginas 861-870, San Jose, CA, 1993.
+
+Literatura OR:
+
+O.L. Mangasarian, W.N. Street e W.H. Wolberg.
+Diagnóstico e prognóstico do câncer de mama por meio de programação linear.
+Operations Research, 43 (4), páginas 570-577, julho-agosto de 1995.
+
+Literatura médica:
+
+W.H. Wolberg, W.N. Street e O.L. Mangasarian.
+Técnicas de aprendizado de máquina para diagnosticar câncer de mama a partir de
+aspirados com agulha fina.
+Cancer Letters 77 (1994) 163-171.
+
+W.H. Wolberg, W.N. Street e O.L. Mangasarian.
+Análise de imagens e aprendizado de máquina aplicados ao câncer de mama
+diagnóstico e prognóstico.
+Citologia e Histologia Analítica e Quantitativa, vol. 17
+No. 2, páginas 77-87, abril de 1995.
+
+W.H. Wolberg, W.N. Street, D.M. Heisey e O.L. Mangasarian.
+Diagnóstico e prognóstico computadorizados do câncer de mama
+agulha aspira.
+Archives of Surgery 1995; 130: 511-516.
+
+W.H. Wolberg, W.N. Street, D.M. Heisey e O.L. Mangasarian.
+As características nucleares derivadas de computador distinguem os malignos dos
+citologia mamária benigna.
+Revista Brasileira de Zootecnia.
+
+Veja também:
+http://www.cs.wisc.edu/~olvi/uwmp/mpml.html
+http://www.cs.wisc.edu/~olvi/uwmp/cancer.html
+
+Resultados:
+
+- predição do campo 2, diagnóstico: B = benigno, M = maligno
+- os conjuntos são linearmente separáveis ​​usando todos os 30 recursos de entrada
+- melhor precisão preditiva obtida usando um plano de separação
+no espaço 3D da pior área, pior suavidade e
+Textura Média. Precisão estimada 97,5% usando repetidos
+Validações cruzadas 10 vezes. O classificador está corretamente
+diagnosticou 176 novos pacientes consecutivos a partir de novembro
+1995.
+
+4. Informação relevante
+
+Os recursos são calculados a partir de uma imagem digitalizada de uma agulha fina
+aspirado (PAAF) de uma massa mamária. Eles descrevem
+características dos núcleos celulares presentes na imagem.
+Algumas das imagens podem ser encontradas em
+http://www.cs.wisc.edu/~street/images/
+
+O plano de separação descrito acima foi obtido usando
+Árvore de método de múltiplas superfícies (MSM-T) [K. P. Bennett, "Árvore de Decisão
+Construção via programação linear. "Anais da 4ª
+Sociedade de Inteligência Artificial e Ciência Cognitiva do Centro-Oeste,
+97-101, 1992], um método de classificação que utiliza linear
+programação para construir uma árvore de decisão. Funcionalidades relevantes
+foram selecionados usando uma pesquisa exaustiva no espaço de 1 a 4
+recursos e 1-3 planos de separação.
+
+O programa linear real usado para obter o plano de separação
+no espaço tridimensional é o descrito em:
+[K. P. Bennett e O. L. Mangasarian: "Robust Linear
+Discriminação de programação de dois conjuntos linearmente inseparáveis ​​",
+Optimization Methods and Software 1, 1992, 23-34].
+
+
+Este banco de dados também está disponível no servidor ftp UW CS:
+
+ftp ftp.cs.wisc.edu
+cd math-prog / cpo-dataset / machine-learn / WDBC /
+
+5. Número de instâncias: 569
+
+6. Número de atributos: 32 (ID, diagnóstico, 30 recursos de entrada com valor real)
+
+7. Informações sobre atributos
+
+1) número de identificação
+2) Diagnóstico (M = maligno, B = benigno)
+3-32)
+
+Dez recursos com valor real são calculados para cada núcleo celular:
+
+a) raio (média das distâncias do centro aos pontos do perímetro)
+b) textura (desvio padrão dos valores da escala de cinza)
+c) perímetro
+d) área
+e) suavidade (variação local no comprimento do raio)
+f) compactação (perímetro ^ 2 / área - 1,0)
+g) concavidade (severidade das porções côncavas do contorno)
+h) pontos côncavos (número de partes côncavas do contorno)
+i) simetria
+j) dimensão fractal ("aproximação da costa" - 1)
+
+Vários dos documentos listados acima contêm descrições detalhadas de
+como esses recursos são calculados.
+
+A média, erro padrão e "pior" ou maior (média das três
+maiores valores) desses recursos foram calculados para cada imagem,
+resultando em 30 recursos. Por exemplo, o campo 3 é o raio médio, o campo
+13 é o raio SE, o campo 23 é o pior raio.
+
+Todos os valores dos recursos são recodificados com quatro dígitos significativos.
+
+8. Valores de atributo ausentes: nenhum
+
+9. Distribuição de classe: 357 benignos, 212 malignos

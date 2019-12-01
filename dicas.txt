@@ -1,0 +1,8 @@
+pré processamento da base de daos
+
+Feature Selection = correlação fscore, grfico de cores, diminuir a dimensão do problema
+transform = normalizar
+
+Feature Engnieering =
+
+ Feature Scalling = 
